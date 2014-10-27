@@ -12,6 +12,10 @@
 		43C4392919BCF9CE0017D531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C4392719BCF9CE0017D531 /* Main.storyboard */; };
 		43C4392B19BCF9CE0017D531 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C4392A19BCF9CE0017D531 /* Images.xcassets */; };
 		43C4393719BCF9CE0017D531 /* UIFloatLabelTextInputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4393619BCF9CE0017D531 /* UIFloatLabelTextInputTests.swift */; };
+		43C4395619BCFA3C0017D531 /* B68UIFloatLabelTextInputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4395519BCFA3C0017D531 /* B68UIFloatLabelTextInputTests.swift */; };
+		43C4395919BCFA3C0017D531 /* B68UIFloatLabelTextInput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C4394519BCFA3C0017D531 /* B68UIFloatLabelTextInput.framework */; };
+		43C4395A19BCFA3C0017D531 /* B68UIFloatLabelTextInput.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43C4394519BCFA3C0017D531 /* B68UIFloatLabelTextInput.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43C4396519BCFFD10017D531 /* B68UIFloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4396419BCFFD10017D531 /* B68UIFloatLabelTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +26,42 @@
 			remoteGlobalIDString = 43C4391D19BCF9CE0017D531;
 			remoteInfo = UIFloatLabelTextInput;
 		};
+		43C4395019BCFA3C0017D531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43C4391619BCF9CE0017D531 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43C4391D19BCF9CE0017D531;
+			remoteInfo = UIFloatLabelTextInput;
+		};
+		43C4395719BCFA3C0017D531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43C4391619BCF9CE0017D531 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43C4394419BCFA3C0017D531;
+			remoteInfo = B68UIFloatLabelTextInput;
+		};
+		43C4395B19BCFA3C0017D531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43C4391619BCF9CE0017D531 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43C4394419BCFA3C0017D531;
+			remoteInfo = B68UIFloatLabelTextInput;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		43C4396019BCFA3C0017D531 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				43C4395A19BCFA3C0017D531 /* B68UIFloatLabelTextInput.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		43C4391E19BCF9CE0017D531 /* UIFloatLabelTextInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIFloatLabelTextInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +73,12 @@
 		43C4393019BCF9CE0017D531 /* UIFloatLabelTextInputTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIFloatLabelTextInputTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C4393519BCF9CE0017D531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43C4393619BCF9CE0017D531 /* UIFloatLabelTextInputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFloatLabelTextInputTests.swift; sourceTree = "<group>"; };
+		43C4394519BCFA3C0017D531 /* B68UIFloatLabelTextInput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = B68UIFloatLabelTextInput.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43C4394819BCFA3C0017D531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43C4394F19BCFA3C0017D531 /* B68UIFloatLabelTextInputTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = B68UIFloatLabelTextInputTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43C4395419BCFA3C0017D531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43C4395519BCFA3C0017D531 /* B68UIFloatLabelTextInputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B68UIFloatLabelTextInputTests.swift; sourceTree = "<group>"; };
+		43C4396419BCFFD10017D531 /* B68UIFloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = B68UIFloatLabelTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,10 +86,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C4395919BCFA3C0017D531 /* B68UIFloatLabelTextInput.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		43C4392D19BCF9CE0017D531 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43C4394119BCFA3C0017D531 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43C4394C19BCFA3C0017D531 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,6 +119,8 @@
 			children = (
 				43C4392019BCF9CE0017D531 /* UIFloatLabelTextInput */,
 				43C4393319BCF9CE0017D531 /* UIFloatLabelTextInputTests */,
+				43C4394619BCFA3C0017D531 /* B68UIFloatLabelTextInput */,
+				43C4395219BCFA3C0017D531 /* B68UIFloatLabelTextInputTests */,
 				43C4391F19BCF9CE0017D531 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +130,8 @@
 			children = (
 				43C4391E19BCF9CE0017D531 /* UIFloatLabelTextInput.app */,
 				43C4393019BCF9CE0017D531 /* UIFloatLabelTextInputTests.xctest */,
+				43C4394519BCFA3C0017D531 /* B68UIFloatLabelTextInput.framework */,
+				43C4394F19BCFA3C0017D531 /* B68UIFloatLabelTextInputTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,7 +173,51 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		43C4394619BCFA3C0017D531 /* B68UIFloatLabelTextInput */ = {
+			isa = PBXGroup;
+			children = (
+				43C4396419BCFFD10017D531 /* B68UIFloatLabelTextField.swift */,
+				43C4394719BCFA3C0017D531 /* Supporting Files */,
+			);
+			path = B68UIFloatLabelTextInput;
+			sourceTree = "<group>";
+		};
+		43C4394719BCFA3C0017D531 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43C4394819BCFA3C0017D531 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43C4395219BCFA3C0017D531 /* B68UIFloatLabelTextInputTests */ = {
+			isa = PBXGroup;
+			children = (
+				43C4395519BCFA3C0017D531 /* B68UIFloatLabelTextInputTests.swift */,
+				43C4395319BCFA3C0017D531 /* Supporting Files */,
+			);
+			path = B68UIFloatLabelTextInputTests;
+			sourceTree = "<group>";
+		};
+		43C4395319BCFA3C0017D531 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43C4395419BCFA3C0017D531 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		43C4394219BCFA3C0017D531 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		43C4391D19BCF9CE0017D531 /* UIFloatLabelTextInput */ = {
@@ -119,10 +227,13 @@
 				43C4391A19BCF9CE0017D531 /* Sources */,
 				43C4391B19BCF9CE0017D531 /* Frameworks */,
 				43C4391C19BCF9CE0017D531 /* Resources */,
+				43C4396019BCFA3C0017D531 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				43C4395819BCFA3C0017D531 /* PBXTargetDependency */,
+				43C4395C19BCFA3C0017D531 /* PBXTargetDependency */,
 			);
 			name = UIFloatLabelTextInput;
 			productName = UIFloatLabelTextInput;
@@ -147,6 +258,42 @@
 			productReference = 43C4393019BCF9CE0017D531 /* UIFloatLabelTextInputTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		43C4394419BCFA3C0017D531 /* B68UIFloatLabelTextInput */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43C4395D19BCFA3C0017D531 /* Build configuration list for PBXNativeTarget "B68UIFloatLabelTextInput" */;
+			buildPhases = (
+				43C4394019BCFA3C0017D531 /* Sources */,
+				43C4394119BCFA3C0017D531 /* Frameworks */,
+				43C4394219BCFA3C0017D531 /* Headers */,
+				43C4394319BCFA3C0017D531 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = B68UIFloatLabelTextInput;
+			productName = B68UIFloatLabelTextInput;
+			productReference = 43C4394519BCFA3C0017D531 /* B68UIFloatLabelTextInput.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		43C4394E19BCFA3C0017D531 /* B68UIFloatLabelTextInputTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43C4396119BCFA3C0017D531 /* Build configuration list for PBXNativeTarget "B68UIFloatLabelTextInputTests" */;
+			buildPhases = (
+				43C4394B19BCFA3C0017D531 /* Sources */,
+				43C4394C19BCFA3C0017D531 /* Frameworks */,
+				43C4394D19BCFA3C0017D531 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43C4395119BCFA3C0017D531 /* PBXTargetDependency */,
+			);
+			name = B68UIFloatLabelTextInputTests;
+			productName = B68UIFloatLabelTextInputTests;
+			productReference = 43C4394F19BCFA3C0017D531 /* B68UIFloatLabelTextInputTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,6 +307,13 @@
 						CreatedOnToolsVersion = 6.0;
 					};
 					43C4392F19BCF9CE0017D531 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 43C4391D19BCF9CE0017D531;
+					};
+					43C4394419BCFA3C0017D531 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					43C4394E19BCFA3C0017D531 = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 43C4391D19BCF9CE0017D531;
 					};
@@ -180,6 +334,8 @@
 			targets = (
 				43C4391D19BCF9CE0017D531 /* UIFloatLabelTextInput */,
 				43C4392F19BCF9CE0017D531 /* UIFloatLabelTextInputTests */,
+				43C4394419BCFA3C0017D531 /* B68UIFloatLabelTextInput */,
+				43C4394E19BCFA3C0017D531 /* B68UIFloatLabelTextInputTests */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +351,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		43C4392E19BCF9CE0017D531 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43C4394319BCFA3C0017D531 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43C4394D19BCFA3C0017D531 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -221,6 +391,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43C4394019BCFA3C0017D531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43C4396519BCFFD10017D531 /* B68UIFloatLabelTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43C4394B19BCFA3C0017D531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43C4395619BCFA3C0017D531 /* B68UIFloatLabelTextInputTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -228,6 +414,21 @@
 			isa = PBXTargetDependency;
 			target = 43C4391D19BCF9CE0017D531 /* UIFloatLabelTextInput */;
 			targetProxy = 43C4393119BCF9CE0017D531 /* PBXContainerItemProxy */;
+		};
+		43C4395119BCFA3C0017D531 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43C4391D19BCF9CE0017D531 /* UIFloatLabelTextInput */;
+			targetProxy = 43C4395019BCFA3C0017D531 /* PBXContainerItemProxy */;
+		};
+		43C4395819BCFA3C0017D531 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43C4394419BCFA3C0017D531 /* B68UIFloatLabelTextInput */;
+			targetProxy = 43C4395719BCFA3C0017D531 /* PBXContainerItemProxy */;
+		};
+		43C4395C19BCFA3C0017D531 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43C4394419BCFA3C0017D531 /* B68UIFloatLabelTextInput */;
+			targetProxy = 43C4395B19BCFA3C0017D531 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -376,6 +577,83 @@
 			};
 			name = Release;
 		};
+		43C4395E19BCFA3C0017D531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = B68UIFloatLabelTextInput/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		43C4395F19BCFA3C0017D531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = B68UIFloatLabelTextInput/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		43C4396219BCFA3C0017D531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = B68UIFloatLabelTextInputTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIFloatLabelTextInput.app/UIFloatLabelTextInput";
+			};
+			name = Debug;
+		};
+		43C4396319BCFA3C0017D531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = B68UIFloatLabelTextInputTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIFloatLabelTextInput.app/UIFloatLabelTextInput";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -395,6 +673,7 @@
 				43C4393C19BCF9CE0017D531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43C4393D19BCF9CE0017D531 /* Build configuration list for PBXNativeTarget "UIFloatLabelTextInputTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +682,25 @@
 				43C4393F19BCF9CE0017D531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43C4395D19BCFA3C0017D531 /* Build configuration list for PBXNativeTarget "B68UIFloatLabelTextInput" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43C4395E19BCFA3C0017D531 /* Debug */,
+				43C4395F19BCFA3C0017D531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43C4396119BCFA3C0017D531 /* Build configuration list for PBXNativeTarget "B68UIFloatLabelTextInputTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43C4396219BCFA3C0017D531 /* Debug */,
+				43C4396319BCFA3C0017D531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
