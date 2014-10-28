@@ -22,15 +22,22 @@ class B68UIFloatLabelTextField: UITextField {
   
   @discussion Note: Default Color is blue.
   */
-  var floatingLabelActiveTextColor = UIColor.blueColor()
-  
+  @IBInspectable var activeTextColorfloatingLabel : UIColor = UIColor.blueColor() {
+    didSet {
+      floatingLabel.textColor = activeTextColorfloatingLabel
+    }
+  }
   /**
   The color of the floating label displayed above the text field when it is in
   an inactive state (i.e. the associated text view is not first responder).
   
   @discussion Note: 70% gray is used by default if this is nil.
   */
-  var floatingLabelInactiveTextColor = UIColor(white: 0.7, alpha: 1.0)
+  @IBInspectable var inactiveTextColorfloatingLabel : UIColor = UIColor(white: 0.7, alpha: 1.0) {
+    didSet {
+      floatingLabel.textColor = inactiveTextColorfloatingLabel
+    }
+  }
 
   /**
   Used to cache the placeholder string.
@@ -95,9 +102,9 @@ class B68UIFloatLabelTextField: UITextField {
   
   //MARK: Setup
   func setup() {
-    setupViewDefaults()
     setupObservers()
     setupFloatingLabel()
+    setupViewDefaults()
   }
   
   func setupObservers() {
@@ -107,16 +114,13 @@ class B68UIFloatLabelTextField: UITextField {
   func setupFloatingLabel() {
     // Create the floating label instance and add it to the view
     floatingLabel.font = UIFont.boldSystemFontOfSize(12)
-    floatingLabel.backgroundColor = UIColor.redColor()
-    backgroundColor = UIColor.greenColor()
     floatingLabel.alpha = 1
-    floatingLabel.center = CGPointMake(frame.origin.x, verticalPadding)
+    floatingLabel.center = CGPointMake(horizontalPadding, verticalPadding)
     addSubview(floatingLabel)
-
     //TODO: Set tint color instead of default value
     
     // Setup default colors for the floating label states
-    floatingLabel.textColor = floatingLabelInactiveTextColor
+    floatingLabel.textColor = inactiveTextColorfloatingLabel
     floatingLabel.alpha = 0
 
   }
@@ -144,7 +148,6 @@ class B68UIFloatLabelTextField: UITextField {
       showFloatingLabelWithAnimation(false)
     }
   }
-
   
   func showFloatingLabelWithAnimation(isAnimated : Bool)
   {
@@ -207,14 +210,14 @@ class B68UIFloatLabelTextField: UITextField {
   
   override func becomeFirstResponder() -> Bool {
     super.becomeFirstResponder()
-    floatingLabel.textColor = floatingLabelActiveTextColor
+    floatingLabel.textColor = activeTextColorfloatingLabel
     return true
   }
   
   override func resignFirstResponder() -> Bool {
     
     if (hasText()) {
-      floatingLabel.textColor = floatingLabelInactiveTextColor
+      floatingLabel.textColor = inactiveTextColorfloatingLabel
     }
     super.resignFirstResponder()
 
