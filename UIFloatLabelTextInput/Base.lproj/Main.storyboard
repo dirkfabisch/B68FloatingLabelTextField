@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="UIFloatLabelTextInput" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gL6-X5-brp">
+                                <rect key="frame" x="36" y="169" width="120" height="30"/>
+                                <state key="normal" title="dismiss keyboard">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissKeyboard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="89U-dK-eQv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" placeholder="This is a single-line text field" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Aa4-GQ-XUt" customClass="B68UIFloatLabelTextField" customModule="B68UIFloatLabelTextInput">
+                                <rect key="frame" x="36" y="97" width="300" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="F5E-CD-Buw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="348" id="Syp-tk-m7h">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="200"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="F5E-CD-Buw"/>
+                                        <exclude reference="Syp-tk-m7h"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="F5E-CD-Buw"/>
+                                        <include reference="Syp-tk-m7h"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Placeholder Text" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EuA-fm-jRR" customClass="B68UIFloatLabelTextField" customModule="B68UIFloatLabelTextInput">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeTextColorfloatingLabel">
+                                        <color key="value" red="0.52844518880000002" green="1" blue="0.45942862890000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveTextColorfloatingLabel">
+                                        <color key="value" red="1" green="0.0" blue="0.63137257099999999" alpha="1" colorSpace="deviceRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aa4-GQ-XUt" secondAttribute="trailing" constant="10" id="72u-vq-5SN"/>
+                            <constraint firstItem="Aa4-GQ-XUt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="Az7-59-34u"/>
+                            <constraint firstItem="Aa4-GQ-XUt" firstAttribute="height" secondItem="EuA-fm-jRR" secondAttribute="height" id="Ied-RH-slq"/>
+                            <constraint firstItem="Aa4-GQ-XUt" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="K5z-CQ-Bo4"/>
+                            <constraint firstItem="EuA-fm-jRR" firstAttribute="top" secondItem="Aa4-GQ-XUt" secondAttribute="bottom" constant="14" id="W3H-82-Kka">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="Aa4-GQ-XUt" firstAttribute="width" secondItem="EuA-fm-jRR" secondAttribute="width" id="f3H-zt-deF"/>
+                            <constraint firstItem="gL6-X5-brp" firstAttribute="top" secondItem="EuA-fm-jRR" secondAttribute="bottom" constant="-12" id="myu-IH-dvp">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="Aa4-GQ-XUt" firstAttribute="leading" secondItem="gL6-X5-brp" secondAttribute="leading" id="nVa-Sx-cZR"/>
+                            <constraint firstItem="Aa4-GQ-XUt" firstAttribute="leading" secondItem="EuA-fm-jRR" secondAttribute="leading" id="wou-AG-ooZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="EuA-fm-jRR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="W3H-82-Kka"/>
+                                <exclude reference="72u-vq-5SN"/>
+                                <exclude reference="Ied-RH-slq"/>
+                                <exclude reference="f3H-zt-deF"/>
+                                <exclude reference="wou-AG-ooZ"/>
+                                <exclude reference="myu-IH-dvp"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="EuA-fm-jRR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="W3H-82-Kka"/>
+                                <include reference="72u-vq-5SN"/>
+                                <include reference="Ied-RH-slq"/>
+                                <include reference="f3H-zt-deF"/>
+                                <include reference="wou-AG-ooZ"/>
+                                <include reference="myu-IH-dvp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="646.5" y="408"/>
+        </scene>
+    </scenes>
+</document>
