@@ -5,7 +5,7 @@ Swift implementation of the [Float Label Design Pattern](http://mattdsmith.com/f
 
 Implementing an input field for a device with limited screen estate is challenging. Matt has developed an pattern for combining a placeholder text wit a floating label if needed.
 
-![Floating Label Animation Example](https://d13yacurqjgara.cloudfront.net/users/6410/screenshots/1254439/form-animation-_gif_.gif
+![Floating Label Animation Example](https://d13yacurqjgara.cloudfront.net/users/6410/screenshots/1254439/form-animation-_gif_.gif)
 
 I implemented the pattern in SWIFT and enabled some of the internal propertiers in the XCode 6 Interface Builder (see screenshot)
 
@@ -17,5 +17,5 @@ Inactive Color: Text Color of the floating label if unfocused
 Licence: MIT
 
 Based on the Objectiv-C implementations from:
-[jverdi](https://github.com/jverdi/JVFloatLabeledTextField)
-[ArtSabintsev](https://github.com/ArtSabintsev/UIFloatLabelTextView)
+- [jverdi](https://github.com/jverdi/JVFloatLabeledTextField)
+- [ArtSabintsev](https://github.com/ArtSabintsev/UIFloatLabelTextView)
