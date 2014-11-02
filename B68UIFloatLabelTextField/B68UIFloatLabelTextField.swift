@@ -87,9 +87,10 @@ class B68UIFloatLabelTextField: UITextField {
     get {
       return super.placeholder
     }
-    set {
-      if (cachedPlaceholder != placeholder) {
-        cachedPlaceholder = self.placeholder!
+    set (newValue){
+      super.placeholder = newValue
+      if (cachedPlaceholder != newValue) {
+        cachedPlaceholder = newValue!
         floatingLabel.text = self.cachedPlaceholder
         floatingLabel.sizeToFit()
       }
@@ -105,6 +106,7 @@ class B68UIFloatLabelTextField: UITextField {
     setupObservers()
     setupFloatingLabel()
     setupViewDefaults()
+    println("Setup")
   }
   
   func setupObservers() {
