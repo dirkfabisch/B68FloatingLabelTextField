@@ -106,7 +106,6 @@ class B68UIFloatLabelTextField: UITextField {
     setupObservers()
     setupFloatingLabel()
     setupViewDefaults()
-    println("Setup")
   }
   
   func setupObservers() {
