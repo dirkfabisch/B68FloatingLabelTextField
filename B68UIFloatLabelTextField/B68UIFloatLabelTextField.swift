@@ -154,7 +154,7 @@ class B68UIFloatLabelTextField: UITextField {
   {
     let fl_frame = CGRectMake(
       horizontalPadding,
-      3,
+      0,
       CGRectGetWidth(self.floatingLabel.frame),
       CGRectGetHeight(self.floatingLabel.frame)
     )
