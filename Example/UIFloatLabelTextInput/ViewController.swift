@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
                             
+  @IBOutlet weak var firstNameTextField: B68UIFloatLabelTextField!
+  @IBOutlet weak var lastNameTextField: B68UIFloatLabelTextField!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -24,5 +27,13 @@ class ViewController: UIViewController {
     view.endEditing(true)
   }
 
+ 
+  @IBAction func setTextForFirstName(sender: AnyObject) {
+    firstNameTextField.text = "Firstname Dirk Fabisch"
+  }
+  
+  @IBAction func addTextForSecondTextFiels (sender: AnyObject) {
+    lastNameTextField.text = "Lastname Dirk Fabisch"
+  }
 }
 

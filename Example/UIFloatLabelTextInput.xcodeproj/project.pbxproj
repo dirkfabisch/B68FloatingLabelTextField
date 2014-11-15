@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		434C7DEE1A08B3FA0035ED87 /* B68UIFloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434C7DED1A08B3FA0035ED87 /* B68UIFloatLabelTextField.swift */; };
 		43C4392419BCF9CE0017D531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4392319BCF9CE0017D531 /* AppDelegate.swift */; };
 		43C4392619BCF9CE0017D531 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4392519BCF9CE0017D531 /* ViewController.swift */; };
 		43C4392919BCF9CE0017D531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C4392719BCF9CE0017D531 /* Main.storyboard */; };
 		43C4392B19BCF9CE0017D531 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C4392A19BCF9CE0017D531 /* Images.xcassets */; };
-		43DE5AFD1A0155D000E53152 /* B68UIFloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DE5AFC1A0155D000E53152 /* B68UIFloatLabelTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,13 +28,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		434C7DED1A08B3FA0035ED87 /* B68UIFloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = B68UIFloatLabelTextField.swift; sourceTree = "<group>"; };
 		43C4391E19BCF9CE0017D531 /* UIFloatLabelTextInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIFloatLabelTextInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C4392219BCF9CE0017D531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43C4392319BCF9CE0017D531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C4392519BCF9CE0017D531 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		43C4392819BCF9CE0017D531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43C4392A19BCF9CE0017D531 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		43DE5AFC1A0155D000E53152 /* B68UIFloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = B68UIFloatLabelTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,10 +48,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		434C7DEC1A08B3FA0035ED87 /* B68UIFloatLabelTextField */ = {
+			isa = PBXGroup;
+			children = (
+				434C7DED1A08B3FA0035ED87 /* B68UIFloatLabelTextField.swift */,
+			);
+			name = B68UIFloatLabelTextField;
+			path = ../B68UIFloatLabelTextField;
+			sourceTree = "<group>";
+		};
 		43C4391519BCF9CE0017D531 = {
 			isa = PBXGroup;
 			children = (
-				43DE5AFB1A0155D000E53152 /* B68UIFloatLabelTextInput */,
+				434C7DEC1A08B3FA0035ED87 /* B68UIFloatLabelTextField */,
 				43C4392019BCF9CE0017D531 /* UIFloatLabelTextInput */,
 				43C4391F19BCF9CE0017D531 /* Products */,
 			);
@@ -83,14 +92,6 @@
 				43C4392219BCF9CE0017D531 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		43DE5AFB1A0155D000E53152 /* B68UIFloatLabelTextInput */ = {
-			isa = PBXGroup;
-			children = (
-				43DE5AFC1A0155D000E53152 /* B68UIFloatLabelTextField.swift */,
-			);
-			path = B68UIFloatLabelTextInput;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +166,7 @@
 			files = (
 				43C4392619BCF9CE0017D531 /* ViewController.swift in Sources */,
 				43C4392419BCF9CE0017D531 /* AppDelegate.swift in Sources */,
-				43DE5AFD1A0155D000E53152 /* B68UIFloatLabelTextField.swift in Sources */,
+				434C7DEE1A08B3FA0035ED87 /* B68UIFloatLabelTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
