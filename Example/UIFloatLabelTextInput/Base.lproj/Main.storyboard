@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gL6-X5-brp">
-                                <rect key="frame" x="21" y="156" width="124" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gL6-X5-brp">
+                                <rect key="frame" x="21" y="134" width="124" height="30"/>
                                 <state key="normal" title="Dismiss Keyboard">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -27,15 +27,12 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Dirk" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FtR-Gj-yhk" customClass="B68UIFloatLabelTextField" customModule="UIFloatLabelTextInput" customModuleProvider="target">
-                                <rect key="frame" x="21" y="40" width="558" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="AGT-Ax-pFt"/>
-                                </constraints>
+                                <rect key="frame" x="21" y="40" width="558" height="19"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tDl-sp-xqE" customClass="B68UIFloatLabelTextField" customModule="UIFloatLabelTextInput" customModuleProvider="target">
-                                <rect key="frame" x="21" y="92" width="558" height="44"/>
+                                <rect key="frame" x="21" y="67" width="558" height="19"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -47,24 +44,62 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fb-NO-Qun">
+                                <rect key="frame" x="21" y="210" width="102" height="30"/>
+                                <state key="normal" title="Set Last Name">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTextForSecondTextFiels:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="L42-Z8-XyG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SK-Pu-PMr">
+                                <rect key="frame" x="21" y="172" width="102" height="30"/>
+                                <state key="normal" title="Set First Name">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setTextForFirstName:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Tx5-fy-Y9K"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="@dirkfabisch" placeholder="twitter" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wd7-wy-L9M" customClass="B68UIFloatLabelTextField" customModule="UIFloatLabelTextInput" customModuleProvider="target">
+                                <rect key="frame" x="21" y="94" width="563" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6Fb-NO-Qun" firstAttribute="leading" secondItem="9SK-Pu-PMr" secondAttribute="leading" id="4MQ-ft-rZL"/>
+                            <constraint firstItem="FtR-Gj-yhk" firstAttribute="leading" secondItem="6Fb-NO-Qun" secondAttribute="leading" id="8Hd-a2-GtO"/>
+                            <constraint firstItem="9SK-Pu-PMr" firstAttribute="top" secondItem="gL6-X5-brp" secondAttribute="bottom" constant="8" symbolic="YES" id="BvH-g2-IUT"/>
                             <constraint firstItem="FtR-Gj-yhk" firstAttribute="leading" secondItem="tDl-sp-xqE" secondAttribute="leading" id="Cvp-dC-GHe"/>
+                            <constraint firstItem="tDl-sp-xqE" firstAttribute="leading" secondItem="wd7-wy-L9M" secondAttribute="leading" id="FBH-SE-SS7"/>
+                            <constraint firstItem="FtR-Gj-yhk" firstAttribute="leading" secondItem="tDl-sp-xqE" secondAttribute="leading" id="GXB-eK-V9G"/>
                             <constraint firstItem="tDl-sp-xqE" firstAttribute="top" secondItem="FtR-Gj-yhk" secondAttribute="bottom" constant="8" symbolic="YES" id="NjP-0E-sOh"/>
                             <constraint firstItem="FtR-Gj-yhk" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="Q6a-ff-epf"/>
-                            <constraint firstItem="gL6-X5-brp" firstAttribute="top" secondItem="tDl-sp-xqE" secondAttribute="bottom" constant="20" id="UHv-9Z-mjf"/>
+                            <constraint firstItem="6Fb-NO-Qun" firstAttribute="top" secondItem="9SK-Pu-PMr" secondAttribute="bottom" constant="8" symbolic="YES" id="SYI-nR-JeR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wd7-wy-L9M" secondAttribute="trailing" id="Sib-Uh-taa"/>
                             <constraint firstItem="FtR-Gj-yhk" firstAttribute="width" secondItem="tDl-sp-xqE" secondAttribute="width" id="aRm-TS-lFE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FtR-Gj-yhk" secondAttribute="trailing" constant="5" id="aXt-Np-w0R"/>
                             <constraint firstItem="FtR-Gj-yhk" firstAttribute="height" secondItem="tDl-sp-xqE" secondAttribute="height" id="b9y-Lx-nUQ"/>
                             <constraint firstItem="FtR-Gj-yhk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="eUK-Xe-FAl"/>
+                            <constraint firstItem="FtR-Gj-yhk" firstAttribute="leading" secondItem="9SK-Pu-PMr" secondAttribute="leading" id="ftN-IK-cer"/>
+                            <constraint firstItem="gL6-X5-brp" firstAttribute="top" secondItem="wd7-wy-L9M" secondAttribute="bottom" constant="20" id="gVp-Lt-Opq"/>
                             <constraint firstItem="gL6-X5-brp" firstAttribute="leading" secondItem="tDl-sp-xqE" secondAttribute="leading" id="gcL-MO-W3J"/>
+                            <constraint firstItem="FtR-Gj-yhk" firstAttribute="leading" secondItem="gL6-X5-brp" secondAttribute="leading" id="jHF-9e-VMs"/>
+                            <constraint firstItem="6Fb-NO-Qun" firstAttribute="leading" secondItem="gL6-X5-brp" secondAttribute="leading" id="ky2-zd-f86"/>
+                            <constraint firstItem="wd7-wy-L9M" firstAttribute="top" secondItem="tDl-sp-xqE" secondAttribute="bottom" constant="8" symbolic="YES" id="ytv-2Y-kxQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstNameTextField" destination="FtR-Gj-yhk" id="RHi-3L-cQ1"/>
+                        <outlet property="lastNameTextField" destination="tDl-sp-xqE" id="FHB-oD-fNm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646.5" y="408"/>
+            <point key="canvasLocation" x="277" y="389"/>
         </scene>
     </scenes>
 </document>
