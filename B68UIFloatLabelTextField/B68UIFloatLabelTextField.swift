@@ -113,8 +113,8 @@ class B68UIFloatLabelTextField: UITextField {
   func setupObservers() {
     NSNotificationCenter.defaultCenter().addObserver(self, selector:"textFieldTextDidChange:", name: UITextFieldTextDidChangeNotification, object: nil)
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeDidChange:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector:"textFieldTextDidBeginEditing:", name: UITextFieldTextDidBeginEditingNotification, object: nil)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector:"textFieldTextDidEndEditing:", name: UITextFieldTextDidEndEditingNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector:"textFieldTextDidBeginEditing:", name: UITextFieldTextDidBeginEditingNotification, object: self)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector:"textFieldTextDidEndEditing:", name: UITextFieldTextDidEndEditingNotification, object: self)
   }
   
   func setupFloatingLabel() {
@@ -241,7 +241,7 @@ class B68UIFloatLabelTextField: UITextField {
   }
   //MARK: TextField Editing Observer
   func textFieldTextDidEndEditing(notification : NSNotification) {
-    if (hasText()) {
+    if (hasText())  {
       floatingLabel.textColor = inactiveTextColorfloatingLabel
     }
   }
