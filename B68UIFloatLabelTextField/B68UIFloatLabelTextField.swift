@@ -71,8 +71,7 @@ class B68UIFloatLabelTextField: UITextField {
   }
   
   //MARK: Unsupported Initializers
-  override init () {
-    super.init()
+  init () {
     fatalError("Using the init() initializer directly is not supported. use init(frame:) instead")
   }
   
@@ -92,7 +91,7 @@ class B68UIFloatLabelTextField: UITextField {
       super.placeholder = newValue
       if (cachedPlaceholder != newValue) {
         cachedPlaceholder = newValue!
-        floatingLabel.text = self.cachedPlaceholder
+        floatingLabel.text = self.cachedPlaceholder as String
         floatingLabel.sizeToFit()
       }
     }
@@ -133,7 +132,7 @@ class B68UIFloatLabelTextField: UITextField {
   func applyFonts() {
     floatingLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption2)
     
-    let textStyle = self.font.fontDescriptor().fontAttributes()["NSCTFontUIUsageAttribute"] as String
+    let textStyle = self.font.fontDescriptor().fontAttributes()["NSCTFontUIUsageAttribute"] as! String
     font = UIFont.preferredFontForTextStyle(textStyle)
   }
   
