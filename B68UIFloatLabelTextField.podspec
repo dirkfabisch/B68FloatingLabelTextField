@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   s.author           = { "Dirk Fabisch" => "dirk@base68.com" }
   s.source           = { :git => "https://github.com/dirkfabisch/B68FloatingLabelTextField.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/dirkfabisch'
-  s.source_files      = "B68UIFloatLabelTextField/B68FloatingLabelTextField.swift"
+  s.source_files      = "B68UIFloatLabelTextField/B68UIFloatLabelTextField.swift"
   
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 end
