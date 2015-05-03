@@ -8,7 +8,7 @@
 
 import UIKit
 
-class B68UIFloatLabelTextField: UITextField {
+public class B68UIFloatLabelTextField: UITextField {
   
   /**
   The floating label that is displayed above the text field when there is other
@@ -65,7 +65,7 @@ class B68UIFloatLabelTextField: UITextField {
   }
   
   //MARK: Nib/Storyboard Initializers
-  required init(coder aDecoder: NSCoder) {
+  required public init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     setup()
   }
@@ -83,7 +83,7 @@ class B68UIFloatLabelTextField: UITextField {
   
   
   //MARK: Setter & Getter
-  override var placeholder : String? {
+  override public var placeholder : String? {
     get {
       return super.placeholder
     }
@@ -97,7 +97,7 @@ class B68UIFloatLabelTextField: UITextField {
     }
   }
   
-  override func hasText() ->Bool {
+  override public func hasText() ->Bool {
     return !text.isEmpty
   }
   
@@ -150,7 +150,7 @@ class B68UIFloatLabelTextField: UITextField {
   }
   
   //MARK: - Drawing & Animations
-  override func layoutSubviews() {
+  override public func layoutSubviews() {
     super.layoutSubviews()
     if (isFirstResponder() && !hasText()) {
       hideFloatingLabel()
@@ -197,18 +197,18 @@ class B68UIFloatLabelTextField: UITextField {
 
   
   //MARK: - Auto Layout
-  override func intrinsicContentSize() -> CGSize {
+  override public func intrinsicContentSize() -> CGSize {
     return sizeThatFits(frame.size)
   }
 
   // Adds padding so these text fields align with B68FloatingPlaceholderTextView's
-  override func textRectForBounds (bounds :CGRect) -> CGRect
+  override public func textRectForBounds (bounds :CGRect) -> CGRect
   {
     return UIEdgeInsetsInsetRect(super.textRectForBounds(bounds), floatingLabelInsets())
   }
   
   // Adds padding so these text fields align with B68FloatingPlaceholderTextView's
-  override func editingRectForBounds (bounds : CGRect) ->CGRect
+  override public func editingRectForBounds (bounds : CGRect) ->CGRect
   {
     return UIEdgeInsetsInsetRect(super.editingRectForBounds(bounds), floatingLabelInsets())
   }
