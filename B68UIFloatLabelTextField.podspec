@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "B68UIFloatLabelTextField"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "Swift implementation of the Float Label Design Pattern by Matt D. Smith as a sub call from UITextField"
   s.homepage         = "https://github.com/dirkfabisch/B68FloatingLabelTextField"
   s.license          = 'MIT'
