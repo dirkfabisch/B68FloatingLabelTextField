@@ -16,6 +16,9 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    
+    // set for the lastNameTextField the placeHolder with an other dynamic text type
+    firstNameTextField.placeHolderTextSize = UIFontTextStyleSubheadline
   }
 
   override func didReceiveMemoryWarning() {
