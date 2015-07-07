@@ -34,11 +34,17 @@ use_frameworks!
 - `pod update`
 - Open generated `.xcworkspace`
 
+#### Swift 2.0 / Xcode 7 / iOS 9.0
+Please use the Swift-2.0 branch.
+
+In your Podfile:
+pod 'B68UIFloatLabelTextField', :git => 'https://github.com/dirkfabisch/B68FloatingLabelTextField.git', :branch => ‘Swift-2.0'
+
 
 ####Requirements
-- iOS 7.0+ (8.0+ if you use Cocoapods)
-- Xcode 6.3
-- Swift 1.2 
+- iOS 7.0+, (8.0+ if you use Cocoapods), 9.0
+- Xcode 6.3 / 7
+- Swift 1.2 / 2.0
 
 ####License
 MIT

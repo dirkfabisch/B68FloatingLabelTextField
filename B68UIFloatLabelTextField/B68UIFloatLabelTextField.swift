@@ -107,7 +107,7 @@ public class B68UIFloatLabelTextField: UITextField {
   }
   
   override public func hasText() ->Bool {
-    return !text.isEmpty
+    return !text!.isEmpty
   }
   
   //MARK: Setup
@@ -141,7 +141,7 @@ public class B68UIFloatLabelTextField: UITextField {
   private func applyFonts() {
     floatingLabel.font = UIFont.preferredFontForTextStyle(placeHolderTextSize)
     
-    let textStyle = self.font.fontDescriptor().fontAttributes()["NSCTFontUIUsageAttribute"] as! String
+    let textStyle = self.font!.fontDescriptor().fontAttributes()["NSCTFontUIUsageAttribute"] as! String
     font = UIFont.preferredFontForTextStyle(textStyle)
   }
   
@@ -177,7 +177,7 @@ public class B68UIFloatLabelTextField: UITextField {
       CGRectGetHeight(self.floatingLabel.frame)
     )
     if (isAnimated) {
-      let options = UIViewAnimationOptions.BeginFromCurrentState | UIViewAnimationOptions.CurveEaseOut
+      let options: UIViewAnimationOptions = [UIViewAnimationOptions.BeginFromCurrentState, UIViewAnimationOptions.CurveEaseOut]
       UIView.animateWithDuration(0.2, delay: 0, options: options, animations: {
         self.floatingLabel.alpha = 1
         self.floatingLabel.frame = fl_frame
@@ -195,8 +195,7 @@ public class B68UIFloatLabelTextField: UITextField {
       CGRectGetWidth(self.floatingLabel.frame),
       CGRectGetHeight(self.floatingLabel.frame)
     )
-    let options = UIViewAnimationOptions.BeginFromCurrentState |
-      UIViewAnimationOptions.CurveEaseIn
+    let options: UIViewAnimationOptions = [UIViewAnimationOptions.BeginFromCurrentState, UIViewAnimationOptions.CurveEaseIn]
     UIView.animateWithDuration(0.2, delay: 0, options: options, animations: {
       self.floatingLabel.alpha = 0
       self.floatingLabel.frame = fl_frame
