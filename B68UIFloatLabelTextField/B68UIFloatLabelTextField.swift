@@ -139,10 +139,9 @@ public class B68UIFloatLabelTextField: UITextField {
   }
   
   private func applyFonts() {
-    floatingLabel.font = UIFont.preferredFontForTextStyle(placeHolderTextSize)
     
-    let textStyle = self.font.fontDescriptor().fontAttributes()["NSCTFontUIUsageAttribute"] as! String
-    font = UIFont.preferredFontForTextStyle(textStyle)
+    // set floatingLabel to have the same font as the textfield
+    floatingLabel.font = UIFont(name: font.fontName, size: UIFont.preferredFontForTextStyle(placeHolderTextSize).pointSize)
   }
   
   private func setupViewDefaults() {
