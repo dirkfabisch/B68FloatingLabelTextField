@@ -68,8 +68,8 @@ public class B68UIFloatLabelTextField: UITextField {
   //MARK: Initializer
   //MARK: Programmatic Initializer
   
-  override convenience init(frame: CGRect) {
-    self.init(frame: frame)
+  override init(frame: CGRect) {
+    super.init(frame: frame)
     setup()
   }
   
