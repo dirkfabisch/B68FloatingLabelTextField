@@ -20,8 +20,8 @@ I implemented the pattern in SWIFT and enabled some of the internal propertiers 
 #### Manual
 Just clone and add ```B68UIFloatLabelTextField.swift``` to your project.
 
-#### Cocoapods
-- Make sure that your Cocoapods version is >= 0.36: `pod --version`
+#### CocoaPods
+- Make sure that your CocoaPods version is >= 0.36: `pod --version`
 - If not, update it: `sudo gem install cocoapods`
 - `pod init` in you project root dir
 - `nano Podfile`, add:
@@ -36,7 +36,7 @@ use_frameworks!
 
 
 ####Requirements
-- iOS 7.0+ (8.0+ if you use Cocoapods)
+- iOS 7.0+ (8.0+ if you use CocoaPods)
 - Xcode 6.3
 - Swift 1.2 
 
