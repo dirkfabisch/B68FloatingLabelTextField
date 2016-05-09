@@ -74,7 +74,7 @@ public class B68UIFloatLabelTextField: UITextField {
   }
   
   //MARK: Nib/Storyboard Initializers
-  required public init(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     setup()
   }
@@ -107,7 +107,7 @@ public class B68UIFloatLabelTextField: UITextField {
   }
   
   override public func hasText() ->Bool {
-    return !text.isEmpty
+    return !text!.isEmpty
   }
   
   //MARK: Setup
@@ -119,10 +119,10 @@ public class B68UIFloatLabelTextField: UITextField {
   }
   
   private func setupObservers() {
-    NSNotificationCenter.defaultCenter().addObserver(self, selector:"textFieldTextDidChange:", name: UITextFieldTextDidChangeNotification, object: nil)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeDidChange:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector:"textFieldTextDidBeginEditing:", name: UITextFieldTextDidBeginEditingNotification, object: self)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector:"textFieldTextDidEndEditing:", name: UITextFieldTextDidEndEditingNotification, object: self)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(B68UIFloatLabelTextField.textFieldTextDidChange), name: UITextFieldTextDidChangeNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(B68UIFloatLabelTextField.fontSizeDidChange), name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(B68UIFloatLabelTextField.textFieldTextDidBeginEditing), name: UITextFieldTextDidBeginEditingNotification, object: self)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(B68UIFloatLabelTextField.textFieldTextDidEndEditing), name: UITextFieldTextDidEndEditingNotification, object: self)
   }
   
   private func setupFloatingLabel() {
@@ -141,7 +141,7 @@ public class B68UIFloatLabelTextField: UITextField {
   private func applyFonts() {
     
     // set floatingLabel to have the same font as the textfield
-    floatingLabel.font = UIFont(name: font.fontName, size: UIFont.preferredFontForTextStyle(placeHolderTextSize).pointSize)
+    floatingLabel.font = UIFont(name: font!.fontName, size: UIFont.preferredFontForTextStyle(placeHolderTextSize).pointSize)
   }
   
   private func setupViewDefaults() {
@@ -176,7 +176,7 @@ public class B68UIFloatLabelTextField: UITextField {
       CGRectGetHeight(self.floatingLabel.frame)
     )
     if (isAnimated) {
-      let options = UIViewAnimationOptions.BeginFromCurrentState | UIViewAnimationOptions.CurveEaseOut
+      let options: UIViewAnimationOptions = [UIViewAnimationOptions.BeginFromCurrentState, UIViewAnimationOptions.CurveEaseOut]
       UIView.animateWithDuration(0.2, delay: 0, options: options, animations: {
         self.floatingLabel.alpha = 1
         self.floatingLabel.frame = fl_frame
@@ -194,8 +194,7 @@ public class B68UIFloatLabelTextField: UITextField {
       CGRectGetWidth(self.floatingLabel.frame),
       CGRectGetHeight(self.floatingLabel.frame)
     )
-    let options = UIViewAnimationOptions.BeginFromCurrentState |
-      UIViewAnimationOptions.CurveEaseIn
+    let options: UIViewAnimationOptions = [UIViewAnimationOptions.BeginFromCurrentState, UIViewAnimationOptions.CurveEaseIn]
     UIView.animateWithDuration(0.2, delay: 0, options: options, animations: {
       self.floatingLabel.alpha = 0
       self.floatingLabel.frame = fl_frame
@@ -258,7 +257,7 @@ public class B68UIFloatLabelTextField: UITextField {
   }
   
   //MARK: Font Size Change Oberver
-  private func fontSizeDidChange (notification : NSNotification) {
+ func fontSizeDidChange (notification : NSNotification) {
     applyFonts()
     invalidateIntrinsicContentSize()
     setNeedsLayout()
