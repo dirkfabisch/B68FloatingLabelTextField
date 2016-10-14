@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view, typically from a nib.
     
     // set for the lastNameTextField the placeHolder with an other dynamic text type
-    firstNameTextField.placeHolderTextSize = UIFontTextStyleSubheadline
+    firstNameTextField.placeHolderTextSize = UIFontTextStyle.subheadline.rawValue
   }
 
   override func didReceiveMemoryWarning() {
@@ -26,16 +26,16 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
-  @IBAction func dismissKeyboard(sender: AnyObject) {
+  @IBAction func dismissKeyboard(_ sender: AnyObject) {
     view.endEditing(true)
   }
 
  
-  @IBAction func setTextForFirstName(sender: AnyObject) {
+  @IBAction func setTextForFirstName(_ sender: AnyObject) {
     firstNameTextField.text = "Firstname Dirk Fabisch"
   }
   
-  @IBAction func addTextForSecondTextFiels (sender: AnyObject) {
+  @IBAction func addTextForSecondTextFiels (_ sender: AnyObject) {
     lastNameTextField.text = "Lastname Dirk Fabisch"
   }
 }
