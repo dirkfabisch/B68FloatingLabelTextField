@@ -8,13 +8,13 @@
 
 import UIKit
 
-public class B68UIFloatLabelTextField: UITextField {
+open class B68UIFloatLabelTextField: UITextField {
   
   /**
   The floating label that is displayed above the text field when there is other
   text in the text field.
   */
-  public var floatingLabel = UILabel(frame: CGRectMake(0, 0, 0, 0))
+  open var floatingLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
   
   /**
   The color of the floating label displayed above the text field when it is in
@@ -22,7 +22,7 @@ public class B68UIFloatLabelTextField: UITextField {
   
   @discussion Note: Default Color is blue.
   */
-  @IBInspectable public var activeTextColorfloatingLabel : UIColor = UIColor.blueColor() {
+  @IBInspectable open var activeTextColorfloatingLabel : UIColor = UIColor.blue {
     didSet {
       floatingLabel.textColor = activeTextColorfloatingLabel
     }
@@ -33,7 +33,7 @@ public class B68UIFloatLabelTextField: UITextField {
   
   @discussion Note: 70% gray is used by default if this is nil.
   */
-  @IBInspectable public var inactiveTextColorfloatingLabel : UIColor = UIColor(white: 0.7, alpha: 1.0) {
+  @IBInspectable open var inactiveTextColorfloatingLabel : UIColor = UIColor(white: 0.7, alpha: 1.0) {
     didSet {
       floatingLabel.textColor = inactiveTextColorfloatingLabel
     }
@@ -42,27 +42,27 @@ public class B68UIFloatLabelTextField: UITextField {
   /**
    The default dynamic test size
   */
-  public var placeHolderTextSize : String = UIFontTextStyleCaption2 {
+  open var placeHolderTextSize : String = UIFontTextStyle.caption2.rawValue {
     didSet {
-      floatingLabel.font = UIFont.preferredFontForTextStyle(placeHolderTextSize)
+      floatingLabel.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle(rawValue: placeHolderTextSize))
     }
   }
   
   /**
   Used to cache the placeholder string.
   */
-  private var cachedPlaceholder = NSString()
+  fileprivate var cachedPlaceholder = NSString()
   
   /**
   Used to draw the placeholder string if necessary. Starting value is true.
   */
-  private var shouldDrawPlaceholder = true
+  fileprivate var shouldDrawPlaceholder = true
   
   /**
   default padding for floatingLabel
   */
-  public var verticalPadding : CGFloat = 0
-  public var horizontalPadding : CGFloat = 0
+  open var verticalPadding : CGFloat = 0
+  open var horizontalPadding : CGFloat = 0
   
   
   //MARK: Initializer
@@ -87,48 +87,48 @@ public class B68UIFloatLabelTextField: UITextField {
   //MARK: Deinit
   deinit {
     // remove observer
-    NSNotificationCenter.defaultCenter().removeObserver(self)
+    NotificationCenter.default.removeObserver(self)
   }
   
   
   //MARK: Setter & Getter
-  override public var placeholder : String? {
+  override open var placeholder : String? {
     get {
       return super.placeholder
     }
     set (newValue) {
       super.placeholder = newValue
-      if (cachedPlaceholder != newValue) {
-        cachedPlaceholder = newValue!
+      if (cachedPlaceholder as String != newValue) {
+        cachedPlaceholder = newValue! as NSString
         floatingLabel.text = self.cachedPlaceholder as String
         floatingLabel.sizeToFit()
       }
     }
   }
   
-  override public func hasText() ->Bool {
+  override open var hasText :Bool {
     return !text!.isEmpty
   }
   
   //MARK: Setup
-  private func setup() {
+  fileprivate func setup() {
     setupObservers()
     setupFloatingLabel()
     applyFonts()
     setupViewDefaults()
   }
   
-  private func setupObservers() {
-    NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(B68UIFloatLabelTextField.textFieldTextDidChange), name: UITextFieldTextDidChangeNotification, object: nil)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(B68UIFloatLabelTextField.fontSizeDidChange), name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(B68UIFloatLabelTextField.textFieldTextDidBeginEditing), name: UITextFieldTextDidBeginEditingNotification, object: self)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(B68UIFloatLabelTextField.textFieldTextDidEndEditing), name: UITextFieldTextDidEndEditingNotification, object: self)
+  fileprivate func setupObservers() {
+    NotificationCenter.default.addObserver(self, selector:#selector(B68UIFloatLabelTextField.textFieldTextDidChange), name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(B68UIFloatLabelTextField.fontSizeDidChange), name: NSNotification.Name.UIContentSizeCategoryDidChange, object: nil)
+    NotificationCenter.default.addObserver(self, selector:#selector(B68UIFloatLabelTextField.textFieldTextDidBeginEditing), name: NSNotification.Name.UITextFieldTextDidBeginEditing, object: self)
+    NotificationCenter.default.addObserver(self, selector:#selector(B68UIFloatLabelTextField.textFieldTextDidEndEditing), name: NSNotification.Name.UITextFieldTextDidEndEditing, object: self)
   }
   
-  private func setupFloatingLabel() {
+  fileprivate func setupFloatingLabel() {
     // Create the floating label instance and add it to the view
     floatingLabel.alpha = 1
-    floatingLabel.center = CGPointMake(horizontalPadding, verticalPadding)
+    floatingLabel.center = CGPoint(x: horizontalPadding, y: verticalPadding)
     addSubview(floatingLabel)
     //TODO: Set tint color instead of default value
     
@@ -138,16 +138,16 @@ public class B68UIFloatLabelTextField: UITextField {
     
   }
   
-  private func applyFonts() {
+  fileprivate func applyFonts() {
     
     // set floatingLabel to have the same font as the textfield
-    floatingLabel.font = UIFont(name: font!.fontName, size: UIFont.preferredFontForTextStyle(placeHolderTextSize).pointSize)
+    floatingLabel.font = UIFont(name: font!.fontName, size: UIFont.preferredFont(forTextStyle: UIFontTextStyle(rawValue: placeHolderTextSize)).pointSize)
   }
   
-  private func setupViewDefaults() {
+  fileprivate func setupViewDefaults() {
     
     // set vertical padding
-    verticalPadding = 0.5 * CGRectGetHeight(self.frame)
+    verticalPadding = 0.5 * self.frame.height
     
     // make sure the placeholder setter methods are called
     if let ph = placeholder {
@@ -158,26 +158,26 @@ public class B68UIFloatLabelTextField: UITextField {
   }
   
   //MARK: - Drawing & Animations
-  override public func layoutSubviews() {
+  override open func layoutSubviews() {
     super.layoutSubviews()
-    if (isFirstResponder() && !hasText()) {
+    if (isFirstResponder && !hasText) {
       hideFloatingLabel()
-    } else if(hasText()) {
+    } else if(hasText) {
       showFloatingLabelWithAnimation(true)
     }
   }
   
-  func showFloatingLabelWithAnimation(isAnimated : Bool)
+  func showFloatingLabelWithAnimation(_ isAnimated : Bool)
   {
-    let fl_frame = CGRectMake(
-      horizontalPadding,
-      0,
-      CGRectGetWidth(self.floatingLabel.frame),
-      CGRectGetHeight(self.floatingLabel.frame)
+    let fl_frame = CGRect(
+      x: horizontalPadding,
+      y: 0,
+      width: self.floatingLabel.frame.width,
+      height: self.floatingLabel.frame.height
     )
     if (isAnimated) {
-      let options: UIViewAnimationOptions = [UIViewAnimationOptions.BeginFromCurrentState, UIViewAnimationOptions.CurveEaseOut]
-      UIView.animateWithDuration(0.2, delay: 0, options: options, animations: {
+      let options: UIViewAnimationOptions = [UIViewAnimationOptions.beginFromCurrentState, UIViewAnimationOptions.curveEaseOut]
+      UIView.animate(withDuration: 0.2, delay: 0, options: options, animations: {
         self.floatingLabel.alpha = 1
         self.floatingLabel.frame = fl_frame
         }, completion: nil)
@@ -188,14 +188,14 @@ public class B68UIFloatLabelTextField: UITextField {
   }
   
   func hideFloatingLabel () {
-    let fl_frame = CGRectMake(
-      horizontalPadding,
-      verticalPadding,
-      CGRectGetWidth(self.floatingLabel.frame),
-      CGRectGetHeight(self.floatingLabel.frame)
+    let fl_frame = CGRect(
+      x: horizontalPadding,
+      y: verticalPadding,
+      width: self.floatingLabel.frame.width,
+      height: self.floatingLabel.frame.height
     )
-    let options: UIViewAnimationOptions = [UIViewAnimationOptions.BeginFromCurrentState, UIViewAnimationOptions.CurveEaseIn]
-    UIView.animateWithDuration(0.2, delay: 0, options: options, animations: {
+    let options: UIViewAnimationOptions = [UIViewAnimationOptions.beginFromCurrentState, UIViewAnimationOptions.curveEaseIn]
+    UIView.animate(withDuration: 0.2, delay: 0, options: options, animations: {
       self.floatingLabel.alpha = 0
       self.floatingLabel.frame = fl_frame
       }, completion: nil
@@ -204,24 +204,24 @@ public class B68UIFloatLabelTextField: UITextField {
 
   
   //MARK: - Auto Layout
-  override public func intrinsicContentSize() -> CGSize {
+  override open var intrinsicContentSize : CGSize {
     return sizeThatFits(frame.size)
   }
 
   // Adds padding so these text fields align with B68FloatingPlaceholderTextView's
-  override public func textRectForBounds (bounds :CGRect) -> CGRect
+  override open func textRect (forBounds bounds :CGRect) -> CGRect
   {
-    return UIEdgeInsetsInsetRect(super.textRectForBounds(bounds), floatingLabelInsets())
+    return UIEdgeInsetsInsetRect(super.textRect(forBounds: bounds), floatingLabelInsets())
   }
   
   // Adds padding so these text fields align with B68FloatingPlaceholderTextView's
-  override public func editingRectForBounds (bounds : CGRect) ->CGRect
+  override open func editingRect (forBounds bounds : CGRect) ->CGRect
   {
-    return UIEdgeInsetsInsetRect(super.editingRectForBounds(bounds), floatingLabelInsets())
+    return UIEdgeInsetsInsetRect(super.editingRect(forBounds: bounds), floatingLabelInsets())
   }
   
   //MARK: - Helpers
-  private func floatingLabelInsets() -> UIEdgeInsets {
+  fileprivate func floatingLabelInsets() -> UIEdgeInsets {
     floatingLabel.sizeToFit()
     return UIEdgeInsetsMake(
       floatingLabel.font.lineHeight,
@@ -232,9 +232,9 @@ public class B68UIFloatLabelTextField: UITextField {
   
   
   //MARK: - Observers
-  func textFieldTextDidChange(notification : NSNotification) {
+  func textFieldTextDidChange(_ notification : Notification) {
     let previousShouldDrawPlaceholderValue = shouldDrawPlaceholder
-    shouldDrawPlaceholder = !hasText()
+    shouldDrawPlaceholder = !hasText
     
     // Only redraw if self.shouldDrawPlaceholder value was changed
     if (previousShouldDrawPlaceholderValue != shouldDrawPlaceholder) {
@@ -246,18 +246,18 @@ public class B68UIFloatLabelTextField: UITextField {
     }
   }
   //MARK: TextField Editing Observer
-  func textFieldTextDidEndEditing(notification : NSNotification) {
-    if (hasText())  {
+  func textFieldTextDidEndEditing(_ notification : Notification) {
+    if (hasText)  {
       floatingLabel.textColor = inactiveTextColorfloatingLabel
     }
   }
   
-  func textFieldTextDidBeginEditing(notification : NSNotification) {
+  func textFieldTextDidBeginEditing(_ notification : Notification) {
     floatingLabel.textColor = activeTextColorfloatingLabel
   }
   
   //MARK: Font Size Change Oberver
- func fontSizeDidChange (notification : NSNotification) {
+ func fontSizeDidChange (_ notification : Notification) {
     applyFonts()
     invalidateIntrinsicContentSize()
     setNeedsLayout()

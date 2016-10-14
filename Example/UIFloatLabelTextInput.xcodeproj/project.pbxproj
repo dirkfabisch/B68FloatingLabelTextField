@@ -128,6 +128,7 @@
 					43C4391D19BCF9CE0017D531 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = YV6CG57Z4A;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -276,6 +277,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.base68.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -291,6 +293,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.base68.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

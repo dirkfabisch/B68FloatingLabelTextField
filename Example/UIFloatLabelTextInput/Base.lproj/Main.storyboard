@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,70 +16,62 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gL6-X5-brp">
-                                <rect key="frame" x="21" y="133" width="124" height="30"/>
                                 <state key="normal" title="Dismiss Keyboard">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="dismissKeyboard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="89U-dK-eQv"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Dirk" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FtR-Gj-yhk" customClass="B68UIFloatLabelTextField" customModule="UIFloatLabelTextInput" customModuleProvider="target">
-                                <rect key="frame" x="21" y="40" width="558" height="19"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tDl-sp-xqE" customClass="B68UIFloatLabelTextField" customModule="UIFloatLabelTextInput" customModuleProvider="target">
-                                <rect key="frame" x="21" y="67" width="558" height="19"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="activeTextColorfloatingLabel">
-                                        <color key="value" red="0.98551744222640991" green="0.12964889575987459" blue="0.010135878579351335" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.98551744222640991" green="0.12964889575987459" blue="0.010135878579351335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="inactiveTextColorfloatingLabel">
-                                        <color key="value" red="0.52844518880000002" green="1" blue="0.45942862890000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.52844518880000002" green="1" blue="0.45942862890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fb-NO-Qun">
-                                <rect key="frame" x="21" y="209" width="102" height="30"/>
                                 <state key="normal" title="Set Last Name">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="addTextForSecondTextFiels:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="L42-Z8-XyG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SK-Pu-PMr">
-                                <rect key="frame" x="21" y="171" width="102" height="30"/>
                                 <state key="normal" title="Set First Name">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="setTextForFirstName:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Tx5-fy-Y9K"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="@dirkfabisch" placeholder="twitter" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wd7-wy-L9M" customClass="B68UIFloatLabelTextField" customModule="UIFloatLabelTextInput" customModuleProvider="target">
-                                <rect key="frame" x="21" y="94" width="563" height="19"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQ7-BW-2eo">
-                                <rect key="frame" x="20" y="474" width="200" height="40"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Place Holder" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I4t-K8-sy9" customClass="B68UIFloatLabelTextField" customModule="UIFloatLabelTextInput" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="180" height="20"/>
-                                        <color key="backgroundColor" red="0.29072558879999999" green="0.56947612759999999" blue="0.30406126379999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.23644882440567017" green="0.50801849365234375" blue="0.2381712794303894" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="I4t-K8-sy9" firstAttribute="leading" secondItem="GQ7-BW-2eo" secondAttribute="leading" constant="10" id="EWv-k4-veb"/>
                                     <constraint firstAttribute="bottom" secondItem="I4t-K8-sy9" secondAttribute="bottom" constant="10" id="HDw-lU-DV4"/>
@@ -87,7 +81,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Fb-NO-Qun" firstAttribute="leading" secondItem="9SK-Pu-PMr" secondAttribute="leading" id="4MQ-ft-rZL"/>
                             <constraint firstItem="FtR-Gj-yhk" firstAttribute="leading" secondItem="6Fb-NO-Qun" secondAttribute="leading" id="8Hd-a2-GtO"/>
