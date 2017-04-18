@@ -11,7 +11,7 @@ I implemented the pattern in SWIFT and enabled some of the internal propertiers 
 
 ![Screenshot](/xcode_screenshot.png)
 
-####Exposed Properties
+#### Exposed Properties
 - Active Color: Text color of the floating label if focused
 - Inactive Color: Text Color of the floating label if unfocused
 
@@ -35,12 +35,12 @@ use_frameworks!
 - Open generated `.xcworkspace`
 
 
-####Requirements
+#### Requirements
 - iOS 7.0+ (8.0+ if you use CocoaPods)
 - Xcode 6.3
 - Swift 1.2 
 
-####License
+#### License
 MIT
 
 Based on the Objectiv-C implementations from:
